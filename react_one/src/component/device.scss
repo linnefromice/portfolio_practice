@@ -1,0 +1,14 @@
+.Device {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, gray, dimgrey);
+  background-size: cover;
+  background-position: center;
+}
