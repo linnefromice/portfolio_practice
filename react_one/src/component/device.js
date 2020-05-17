@@ -15,10 +15,11 @@ const Device = props => {
 
 const Screen = props => (
   <div className="screen">
-    <div className="back_stream_top">
-      <div className="back_stream_bottom">
-        {props.children}
-      </div>
+    <div className="screen_content back_stream_top">
+      <div className="screen_content back_stream_bottom"></div>
+    </div>
+    <div className="screen_content">
+      {props.children}
     </div>
   </div>
 )
