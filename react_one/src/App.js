@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Device from './component/device';
+import Content from './component/content';
 
 function App() {
   const portfolioStyle = {
@@ -13,13 +14,16 @@ function App() {
     alignItems: "center",
     justifyContent: "center",
   }
+  const dummyContent = () => (
+    <div style={portfolioStyle}>
+      <h1>Portfolio</h1>
+    </div>
+  );
 
   return (
     <Container>
       <Device>
-        <div style={portfolioStyle}>
-          <h1>Portfolio</h1>
-        </div>
+        <Content/>
       </Device>
     </Container>
   );
