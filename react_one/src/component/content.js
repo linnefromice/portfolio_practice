@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
-import './content.scss';
-
 import { FaCode, FaLink, FaGithub } from 'react-icons/fa';
 import { MdAccountCircle, MdWork, MdFreeBreakfast } from 'react-icons/md';
 import { RiProfileLine, RiFlutterLine, RiVuejsLine } from 'react-icons/ri';
+import { animated, useSpring } from 'react-spring';
+import { config } from 'react-spring/renderprops';
+
+import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
   return (
-    <div className="mainMenu" onClick={onClick}>
-      <div style={{ height: "80%", opacity: "0.5", color: "silver" }}>
+    <div
+      className="mainMenu"
+      style={{ opacity: "0.5", color: "silver" }}
+      onClick={onClick}
+    >
+      <div style={{ height: "80%" }}>
         {icon}
       </div>
-      <div style={{ height: "20%", opacity: "0.5", color: "silver" }}>
+      <div style={{ height: "20%" }}>
         <center >{name}</center>
       </div>
     </div>
@@ -19,25 +25,42 @@ const MainMenu = ({icon, name, onClick}) => {
 }
 
 const FocusedMainMenu = ({icon, name, onClick}) => {
+  const animatedStyle = useSpring({
+    from: { opacity: "0.5", color: "silver" },
+    to: async (next, cancel) => {
+      await next({ opacity: "0.75", color: "#64f38c" });
+      await next({ opacity: "1", color: "#45B649" });
+    },
+    config: config.gentle
+  });
+
   return (
-    <div className="mainMenu" onClick={onClick}>
-      <div style={{ height: "80%", opacity: "1", color: "black" }}>
+    <animated.div
+      className="mainMenu"
+      style={animatedStyle}
+      onClick={onClick}
+    >
+      <div style={{ height: "80%" }}>
         {icon}
       </div>
-      <div style={{ height: "20%", opacity: "1", color: "black" }}>
+      <div style={{ height: "20%" }}>
         <center >{name}</center>
       </div>
-    </div>
+    </animated.div>
   )
 }
 
 const SubMenu = ({icon, name, onClick}) => {
   return (
-    <div className="subMenu" onClick={onClick}>
-      <div style={{ width: "80%", opacity: "0.5", color: "silver" }}>
+    <div
+      className="subMenu"
+      style={{ opacity: "0.5", color: "silver" }}
+      onClick={onClick}
+    >
+      <div style={{ width: "80%" }}>
         {icon}
       </div>
-      <div style={{ width: "20%", opacity: "0.5", color: "silver" }}>
+      <div style={{ width: "20%" }}>
         <center>{name}</center>
       </div>
     </div>
@@ -45,15 +68,28 @@ const SubMenu = ({icon, name, onClick}) => {
 }
 
 const FocusedSubMenu = ({icon, name, onClick}) => {
+  const animatedStyle = useSpring({
+    from: { opacity: "0.5", color: "silver" },
+    to: async (next, cancel) => {
+      await next({ opacity: "0.75", color: "#64f38c" });
+      await next({ opacity: "1", color: "#45B649" });
+    },
+    config: config.gentle
+  });
+
   return (
-    <div className="subMenu" onClick={onClick}>
-      <div style={{ width: "80%", opacity: "1", color: "black" }}>
+    <animated.div
+      className="subMenu"
+      style={animatedStyle}
+      onClick={onClick}
+    >
+      <div style={{ width: "80%" }}>
         {icon}
       </div>
-      <div style={{ width: "20%", opacity: "1", color: "black" }}>
+      <div style={{ width: "20%" }}>
         <center>{name}</center>
       </div>
-    </div>
+    </animated.div>
   )
 }
 
