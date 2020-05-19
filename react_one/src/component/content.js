@@ -6,6 +6,7 @@ import { animated, useSpring } from 'react-spring';
 import { config } from 'react-spring/renderprops';
 
 import Profile from './contents/profile';
+import WorkExperience from './contents/work_experience';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -104,7 +105,7 @@ const key_sub_work_experience = "key_sub_work_experience";
 const sub_work_experience = {
   icon: <MdWork size="100%"/>,
   name: "Work Experience",
-  content: <div>Content - Work Experience</div>,
+  content: <WorkExperience/>,
 };
 const key_sub_hobby = "key_sub_hobby";
 const sub_hobby = {
