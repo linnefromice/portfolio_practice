@@ -5,6 +5,7 @@ import { RiProfileLine, RiFlutterLine, RiVuejsLine } from 'react-icons/ri';
 import { animated, useSpring } from 'react-spring';
 import { config } from 'react-spring/renderprops';
 
+import Profile from './contents/profile';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -97,7 +98,7 @@ const key_sub_profile = "key_sub_profile";
 const sub_profile = {
   icon: <RiProfileLine size="100%"/>,
   name: "Profile",
-  content: <div>Content - Profile</div>,
+  content: <Profile/>,
 };
 const key_sub_work_experience = "key_sub_work_experience";
 const sub_work_experience = {
