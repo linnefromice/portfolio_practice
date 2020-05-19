@@ -5,53 +5,53 @@ import { FaCode, FaLink, FaGithub } from 'react-icons/fa';
 import { MdAccountCircle, MdWork, MdFreeBreakfast } from 'react-icons/md';
 import { RiProfileLine, RiFlutterLine, RiVuejsLine } from 'react-icons/ri';
 
-const MainMenu = (props) => {
+const MainMenu = ({icon, name, onClick}) => {
   return (
-    <div className="mainMenu" onClick={props.onClick}>
+    <div className="mainMenu" onClick={onClick}>
       <div style={{ height: "80%", opacity: "0.5", color: "silver" }}>
-        {props.icon}
+        {icon}
       </div>
       <div style={{ height: "20%", opacity: "0.5", color: "silver" }}>
-        <center >{props.name}</center>
+        <center >{name}</center>
       </div>
     </div>
   )
 }
 
-const FocusedMainMenu = (props) => {
+const FocusedMainMenu = ({icon, name, onClick}) => {
   return (
-    <div className="mainMenu" onClick={props.onClick}>
+    <div className="mainMenu" onClick={onClick}>
       <div style={{ height: "80%", opacity: "1", color: "black" }}>
-        {props.icon}
+        {icon}
       </div>
       <div style={{ height: "20%", opacity: "1", color: "black" }}>
-        <center >{props.name}</center>
+        <center >{name}</center>
       </div>
     </div>
   )
 }
 
-const SubMenu = (props) => {
+const SubMenu = ({icon, name, onClick}) => {
   return (
-    <div className="subMenu" onClick={props.onClick}>
+    <div className="subMenu" onClick={onClick}>
       <div style={{ width: "80%", opacity: "0.5", color: "silver" }}>
-        {props.icon}
+        {icon}
       </div>
       <div style={{ width: "20%", opacity: "0.5", color: "silver" }}>
-        <center>{props.name}</center>
+        <center>{name}</center>
       </div>
     </div>
   )
 }
 
-const FocusedSubMenu = (props) => {
+const FocusedSubMenu = ({icon, name, onClick}) => {
   return (
-    <div className="subMenu" onClick={props.onClick}>
+    <div className="subMenu" onClick={onClick}>
       <div style={{ width: "80%", opacity: "1", color: "black" }}>
-        {props.icon}
+        {icon}
       </div>
       <div style={{ width: "20%", opacity: "1", color: "black" }}>
-        <center>{props.name}</center>
+        <center>{name}</center>
       </div>
     </div>
   )
