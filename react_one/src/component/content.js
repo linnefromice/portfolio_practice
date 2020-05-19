@@ -8,11 +8,24 @@ import { RiProfileLine, RiFlutterLine, RiVuejsLine } from 'react-icons/ri';
 const MainMenu = (props) => {
   return (
     <div className="mainMenu" onClick={props.onClick}>
-      <div style={{ height: "80%", opacity: "0.5", color: "red" }}>
+      <div style={{ height: "80%", opacity: "0.5", color: "silver" }}>
         {props.icon}
       </div>
-      <div style={{ height: "20%" }}>
-        <center>{props.name}</center>
+      <div style={{ height: "20%", opacity: "0.5", color: "silver" }}>
+        <center >{props.name}</center>
+      </div>
+    </div>
+  )
+}
+
+const FocusedMainMenu = (props) => {
+  return (
+    <div className="mainMenu" onClick={props.onClick}>
+      <div style={{ height: "80%", opacity: "1", color: "black" }}>
+        {props.icon}
+      </div>
+      <div style={{ height: "20%", opacity: "1", color: "black" }}>
+        <center >{props.name}</center>
       </div>
     </div>
   )
@@ -20,11 +33,24 @@ const MainMenu = (props) => {
 
 const SubMenu = (props) => {
   return (
-    <div className="subMenu">
-      <div style={{ width: "80%" }}>
+    <div className="subMenu" onClick={props.onClick}>
+      <div style={{ width: "80%", opacity: "0.5", color: "silver" }}>
         {props.icon}
       </div>
-      <div style={{ width: "20%" }}>
+      <div style={{ width: "20%", opacity: "0.5", color: "silver" }}>
+        <center>{props.name}</center>
+      </div>
+    </div>
+  )
+}
+
+const FocusedSubMenu = (props) => {
+  return (
+    <div className="subMenu" onClick={props.onClick}>
+      <div style={{ width: "80%", opacity: "1", color: "black" }}>
+        {props.icon}
+      </div>
+      <div style={{ width: "20%", opacity: "1", color: "black" }}>
         <center>{props.name}</center>
       </div>
     </div>
@@ -113,26 +139,57 @@ const mainMenuList = {
 };
 
 const Content = () => {
-  const [subMenuList, setSubMenuList] = useState(accountMenuList);
-
+  const [focusedMainMenuKey, setFocusedMainMenuKey] = useState(key_main_account_information);
+  const [focusedSubMenuKey, setFocusedSubMenuKey] = useState(key_sub_profile);
+  
   return (
     <div>
       <div className="wrapperMainMenu">
-        {Object.keys(mainMenuList).map((value, index) => (
-          <MainMenu
-            icon={mainMenuList[value].icon}
-            name={mainMenuList[value].name}
-            onClick={() => setSubMenuList(mainMenuList[value].subMenuList)}
-          />
-        ))}
+        {
+          Object.keys(mainMenuList).map((value, index) => {
+            if (value === focusedMainMenuKey) {
+              return (
+                <FocusedMainMenu
+                  icon={mainMenuList[value].icon}
+                  name={mainMenuList[value].name}
+                  onClick={() => setFocusedMainMenuKey(value)}
+                />
+              );
+            } else {
+              return (
+                <MainMenu
+                  icon={mainMenuList[value].icon}
+                  name={mainMenuList[value].name}
+                  onClick={() => setFocusedMainMenuKey(value)}
+                />
+              );
+            }
+          })
+        }
       </div>
       <div className="wrapperSubMenu">
-        {Object.keys(subMenuList).map((value, index) => (
-          <SubMenu
-            icon={subMenuList[value].icon}
-            name={subMenuList[value].name}
-          />
-        ))}
+        {
+          Object.keys(mainMenuList[focusedMainMenuKey].subMenuList).map((value, index) => {
+            const subMenuList = mainMenuList[focusedMainMenuKey].subMenuList;
+            if (value === focusedSubMenuKey) {
+              return (
+                <FocusedSubMenu
+                  icon={subMenuList[value].icon}
+                  name={subMenuList[value].name}
+                  onClick={() => setFocusedSubMenuKey(value)}
+                />
+              );  
+            } else {
+              return (
+                <SubMenu
+                  icon={subMenuList[value].icon}
+                  name={subMenuList[value].name}
+                  onClick={() => setFocusedSubMenuKey(value)}
+                />
+              );  
+            }
+          })
+        }
       </div>
     </div>
   )
