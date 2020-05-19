@@ -97,16 +97,19 @@ const key_sub_profile = "key_sub_profile";
 const sub_profile = {
   icon: <RiProfileLine size="100%"/>,
   name: "Profile",
+  content: <div>Content - Profile</div>,
 };
 const key_sub_work_experience = "key_sub_work_experience";
 const sub_work_experience = {
   icon: <MdWork size="100%"/>,
   name: "Work Experience",
+  content: <div>Content - Work Experience</div>,
 };
 const key_sub_hobby = "key_sub_hobby";
 const sub_hobby = {
   icon: <MdFreeBreakfast size="100%"/>,
   name: "Hobby",
+  content: <div>Content - Hobby</div>,
 };
 const accountMenuList = {
   key_sub_profile: sub_profile,
@@ -118,21 +121,25 @@ const key_study_record_app = "key_study_record_app";
 const study_record_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "study_record_app",
+  content: <div>Content - study_record_app</div>,
 };
 const key_ff_quiz_app = "key_ff_quiz_app";
 const ff_quiz_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "ff_quiz_app",
+  content: <div>Content - ff_quiz_app</div>,
 };
 const key_marvel_data_app = "key_marvel_data_app";
 const marvel_data_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "marvel_data_app",
+  content: <div>Content - marvel_data_app</div>,
 };
 const key_vuetify_news_app = "key_vuetify_news_app";
 const vuetify_news_app = {
   icon: <RiVuejsLine size="75%"/>,
   name: "vuetify_news_app",
+  content: <div>Content - vuetify_news_app</div>,
 };
 const productMenuList = {
   key_study_record_app: study_record_app,
@@ -145,10 +152,21 @@ const key_link_github = "key_link_github";
 const link_github = {
   icon: <FaGithub size="100%"/>,
   name: "Github",
+  content: <div>Content - Github</div>,
 }
 const linkMenuList = {
   key_link_github: link_github,
 };
+const subMenuList = {
+  key_sub_profile: sub_profile,
+  key_sub_work_experience: sub_work_experience,
+  key_sub_hobby: sub_hobby,
+  key_study_record_app: study_record_app,
+  key_ff_quiz_app: ff_quiz_app,
+  key_marvel_data_app: marvel_data_app,
+  key_vuetify_news_app: vuetify_news_app,
+  key_link_github: link_github,
+}
 
 const key_main_account_information = "key_main_account_information";
 const main_account_information = {
@@ -226,6 +244,9 @@ const Content = () => {
             }
           })
         }
+      </div>
+      <div className="wrapperContent">
+        {subMenuList[focusedSubMenuKey].content}
       </div>
     </div>
   )
