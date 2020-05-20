@@ -8,6 +8,7 @@ import { config } from 'react-spring/renderprops';
 import Profile from './contents/profile';
 import WorkExperience from './contents/work_experience';
 import Hobby from './contents/hobby';
+import InfoStudyRecordApp from './contents/info_study_record_app';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -124,7 +125,7 @@ const key_study_record_app = "key_study_record_app";
 const study_record_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "study_record_app",
-  content: <div>Content - study_record_app</div>,
+  content: <InfoStudyRecordApp/>,
 };
 const key_ff_quiz_app = "key_ff_quiz_app";
 const ff_quiz_app = {
