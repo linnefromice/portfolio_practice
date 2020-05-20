@@ -36,98 +36,28 @@ const WorkExperience = () => {
       <List>
         <ListItem alignItems="flex-start">
           <ListItemText
-            primary="First Project"
+            primary="Simplex Inc."
             secondary={
               <React.Fragment>
                 <Typography>
-                  2016.8 - 2018.1
+                  2016.4 - 2020.4
                 </Typography>
-                {" - I was from engineer to leader role (dev&ops)..."}
+                <span>- Experienced from leading in to O&M / from player to manager.<br/></span>
+                <span>- Financial(CryptoAssets/FX) trade system for individuals & security company.<br/></span>
+                <span>- Java(Spring), HTML/CSS, JavaScript(React), AWS, Cordova, Oracle, Tomcat, Github...<br/></span>
+                <span>18.4-18.7: Mentor / Training for 150 new graduates<br/></span>
+                <span>19.7-20.4: Dev lead (having 30 members) / New development of hybrid application & back system in leading<br/></span>
               </React.Fragment>
             }
           />
         </ListItem>
         <ListItem alignItems="flex-start">
           <ListItemText
-            primary="Second Project"
+            primary="New employment"
             secondary={
               <React.Fragment>
                 <Typography>
-                  2017.12 - 2018.2
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="Third Project"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2018.3
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="Fourth Project"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2018.4 - 2018.8
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="Fifth Project"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2018.8 - 2019.7
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-      </List>
-      <List>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="Sixth Project"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2019.6 - 2020.4
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="Break"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2020.4 - 2020.6
-                </Typography>
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <ListItem alignItems="flex-start">
-          <ListItemText
-            primary="First"
-            secondary={
-              <React.Fragment>
-                <Typography>
-                  2020.6 - now
+                  2020.6 -
                 </Typography>
               </React.Fragment>
             }
