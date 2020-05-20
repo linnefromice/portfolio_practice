@@ -7,6 +7,7 @@ import { config } from 'react-spring/renderprops';
 
 import Profile from './contents/profile';
 import WorkExperience from './contents/work_experience';
+import Hobby from './contents/hobby';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -111,7 +112,7 @@ const key_sub_hobby = "key_sub_hobby";
 const sub_hobby = {
   icon: <MdFreeBreakfast size="100%"/>,
   name: "Hobby",
-  content: <div>Content - Hobby</div>,
+  content: <Hobby/>,
 };
 const accountMenuList = {
   key_sub_profile: sub_profile,
