@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCode, FaLink, FaGithub } from 'react-icons/fa';
 import { MdAccountCircle, MdWork, MdFreeBreakfast } from 'react-icons/md';
-import { RiProfileLine, RiFlutterLine, RiVuejsLine } from 'react-icons/ri';
+import { RiProfileLine, RiFlutterLine } from 'react-icons/ri';
 import { animated, useSpring } from 'react-spring';
 import { config } from 'react-spring/renderprops';
 
@@ -11,6 +11,7 @@ import Hobby from './contents/hobby';
 import InfoStudyRecordApp from './contents/info_study_record_app';
 import InfoFFQuizApp from './contents/info_ff_quiz_app';
 import InfoMarvelApp from './contents/info_marvel_app';
+import InfoOtherProducts from './contents/info_other_products';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -135,23 +136,23 @@ const ff_quiz_app = {
   name: "ff_quiz_app",
   content: <InfoFFQuizApp/>,
 };
-const key_marvel_data_app = "key_marvel_data_app";
-const marvel_data_app = {
+const key_marvel_app = "key_marvel_data_app";
+const marvel_app = {
   icon: <RiFlutterLine size="75%"/>,
-  name: "marvel_data_app",
+  name: "marvel_app",
   content: <InfoMarvelApp/>,
 };
-const key_vuetify_news_app = "key_vuetify_news_app";
-const vuetify_news_app = {
-  icon: <RiVuejsLine size="75%"/>,
-  name: "vuetify_news_app",
-  content: <div>Content - vuetify_news_app</div>,
+const key_other_products = "key_other_products";
+const other_products = {
+  icon: <FaCode size="75%"/>,
+  name: "Others",
+  content: <InfoOtherProducts/>
 };
 const productMenuList = {
   key_study_record_app: study_record_app,
   key_ff_quiz_app: ff_quiz_app,
-  key_marvel_data_app: marvel_data_app,
-  key_vuetify_news_app: vuetify_news_app,
+  key_marvel_app: marvel_app,
+  key_other_products: other_products,
 };
 
 const key_link_github = "key_link_github";
@@ -169,8 +170,8 @@ const subMenuList = {
   key_sub_hobby: sub_hobby,
   key_study_record_app: study_record_app,
   key_ff_quiz_app: ff_quiz_app,
-  key_marvel_data_app: marvel_data_app,
-  key_vuetify_news_app: vuetify_news_app,
+  key_marvel_app: marvel_app,
+  key_other_products: other_products,
   key_link_github: link_github,
 }
 
