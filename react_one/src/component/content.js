@@ -10,6 +10,7 @@ import WorkExperience from './contents/work_experience';
 import Hobby from './contents/hobby';
 import InfoStudyRecordApp from './contents/info_study_record_app';
 import InfoFFQuizApp from './contents/info_ff_quiz_app';
+import InfoMarvelApp from './contents/info_marvel_app';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -138,7 +139,7 @@ const key_marvel_data_app = "key_marvel_data_app";
 const marvel_data_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "marvel_data_app",
-  content: <div>Content - marvel_data_app</div>,
+  content: <InfoMarvelApp/>,
 };
 const key_vuetify_news_app = "key_vuetify_news_app";
 const vuetify_news_app = {
