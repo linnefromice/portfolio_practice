@@ -56,11 +56,13 @@ const InfoStudyRecordApp = () => {
           <Divider/>
           <div style={{ padding: "5px" }}>
             <Chip
+              style={{ margin: 1 }}
               label="Dart"
               color="primary"
               variant="outlined"
             />
             <Chip
+              style={{ margin: 1 }}
               label="Flutter"
               color="primary"
               variant="outlined"
@@ -68,6 +70,7 @@ const InfoStudyRecordApp = () => {
           </div>
           <div style={{ padding: "5px" }}>
             <Chip
+              style={{ margin: 1 }}
               label="sqflite"
               color="secondary"
               variant="outlined"
