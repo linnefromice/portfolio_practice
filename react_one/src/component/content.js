@@ -159,7 +159,8 @@ const key_link_github = "key_link_github";
 const link_github = {
   icon: <FaGithub size="100%"/>,
   name: "Github",
-  content: <div>Content - Github</div>,
+  content: <div></div>,
+  onClick: () => window.open('https://github.com/linnefromice', '_blank')
 }
 const linkMenuList = {
   key_link_github: link_github,
@@ -232,22 +233,43 @@ const Content = () => {
         {
           Object.keys(mainMenuList[focusedMainMenuKey].subMenuList).map((value, index) => {
             const subMenuList = mainMenuList[focusedMainMenuKey].subMenuList;
+            console.log(subMenuList[value].onClick)
             if (value === focusedSubMenuKey) {
-              return (
-                <FocusedSubMenu
-                  icon={subMenuList[value].icon}
-                  name={subMenuList[value].name}
-                  onClick={() => setFocusedSubMenuKey(value)}
-                />
-              );  
+              if (subMenuList[value].onClick === undefined) {
+                return (
+                  <FocusedSubMenu
+                    icon={subMenuList[value].icon}
+                    name={subMenuList[value].name}
+                    onClick={() => setFocusedSubMenuKey(value)}
+                  />
+                ); 
+              } else {
+                return (
+                  <FocusedSubMenu
+                    icon={subMenuList[value].icon}
+                    name={subMenuList[value].name}
+                    onClick={subMenuList[value].onClick}
+                  />
+                ); 
+              }
             } else {
-              return (
-                <SubMenu
-                  icon={subMenuList[value].icon}
-                  name={subMenuList[value].name}
-                  onClick={() => setFocusedSubMenuKey(value)}
-                />
-              );  
+              if (subMenuList[value].onClick === undefined) {
+                return (
+                  <SubMenu
+                    icon={subMenuList[value].icon}
+                    name={subMenuList[value].name}
+                    onClick={() => setFocusedSubMenuKey(value)}
+                  />
+                ); 
+              } else {
+                return (
+                  <SubMenu
+                    icon={subMenuList[value].icon}
+                    name={subMenuList[value].name}
+                    onClick={subMenuList[value].onClick}
+                  />
+                ); 
+              }
             }
           })
         }
