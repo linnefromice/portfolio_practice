@@ -80,7 +80,7 @@ const hobbyListTwo = [
   {
     icon: <FaFootballBall/>,
     primary: "NFL Appreciation",
-    secondary: "From Audrey NFL Club, no longer from Masayasu.W"
+    secondary: "I learned from Audrey NFL Club, no longer from Masayasu.W"
   },
 ]
 
