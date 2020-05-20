@@ -9,6 +9,7 @@ import Profile from './contents/profile';
 import WorkExperience from './contents/work_experience';
 import Hobby from './contents/hobby';
 import InfoStudyRecordApp from './contents/info_study_record_app';
+import InfoFFQuizApp from './contents/info_ff_quiz_app';
 import './content.scss';
 
 const MainMenu = ({icon, name, onClick}) => {
@@ -131,7 +132,7 @@ const key_ff_quiz_app = "key_ff_quiz_app";
 const ff_quiz_app = {
   icon: <RiFlutterLine size="75%"/>,
   name: "ff_quiz_app",
-  content: <div>Content - ff_quiz_app</div>,
+  content: <InfoFFQuizApp/>,
 };
 const key_marvel_data_app = "key_marvel_data_app";
 const marvel_data_app = {
