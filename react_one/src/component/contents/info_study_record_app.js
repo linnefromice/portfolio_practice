@@ -45,7 +45,7 @@ const InfoStudyRecordApp = () => {
         }}
       >
         <CardContent>
-          <Typography variant="h5">
+          <Typography variant="h6">
             study_record_app
           </Typography>
           <Typography color="textSecondary">

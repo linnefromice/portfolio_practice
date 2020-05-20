@@ -45,7 +45,7 @@ const InfoMarvelApp = () => {
         }}
       >
         <CardContent>
-          <Typography variant="h5">
+          <Typography variant="h6">
             marvel_app
           </Typography>
           <Typography color="textSecondary">

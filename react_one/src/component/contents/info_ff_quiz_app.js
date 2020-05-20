@@ -45,7 +45,7 @@ const InfoFFQuizApp = () => {
         }}
       >
         <CardContent>
-          <Typography variant="h5">
+          <Typography variant="h6">
             ff_quiz_app
           </Typography>
           <Typography color="textSecondary">
