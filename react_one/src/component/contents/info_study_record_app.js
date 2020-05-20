@@ -84,7 +84,7 @@ const InfoStudyRecordApp = () => {
         </CardContent>
         <CardMedia
           style={{ padding: 1, width: "20vw", height: "50vh" }}
-          image="/contents/sample1_20200509.gif"
+          image="/contents/study_record_app_one.gif"
           title="Sample"
         />
       </Card>
