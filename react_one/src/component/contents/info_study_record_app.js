@@ -54,7 +54,7 @@ const InfoStudyRecordApp = () => {
             <span>Mobile Application / ios & android<br/></span>
           </Typography>
           <Divider/>
-          <div style={{ padding: "5px" }}>
+          <div style={{ padding: 5 }}>
             <Chip
               style={{ margin: 1 }}
               label="Dart"
@@ -68,7 +68,7 @@ const InfoStudyRecordApp = () => {
               variant="outlined"
             />
           </div>
-          <div style={{ padding: "5px" }}>
+          <div style={{ padding: 5 }}>
             <Chip
               style={{ margin: 1 }}
               label="sqflite"
@@ -77,7 +77,7 @@ const InfoStudyRecordApp = () => {
             />
           </div>
           <Divider/>
-          <div style={{ padding: "5px" }}>
+          <div style={{ padding: 5 }}>
             <IconButton
               href="https://github.com/linnefromice/study_record_app_01"
             >
