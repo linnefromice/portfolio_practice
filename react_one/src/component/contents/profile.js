@@ -2,6 +2,7 @@ import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import Chip from "@material-ui/core/Chip";
 import Typography from "@material-ui/core/Typography";
 
 import { animated, useSpring } from 'react-spring';
@@ -38,7 +39,7 @@ const Profile = () => {
           <center>
             <Typography variant={"h5"}>About Me</Typography>
             <Avatar
-              style={{ width: "10vw", height: "100%"}}
+              style={{ width: "8vw", height: "100%"}}
               src="/contents/icon_account_resize.jpg"
             />
             <Typography variant={"h5"}>Linnefromice</Typography>
@@ -47,9 +48,29 @@ const Profile = () => {
         </CardContent>
         <CardContent>
           <Typography variant={"h6"}>Work</Typography>
-          <Typography>Java(SpringBoot) / React / AWS / Oracle ...</Typography>
+          <div style={{ padding: 1 }}>
+            <Chip style={{ margin: 0.5 }} label="Java" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="JavaScript" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="AWS" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Spring" color="secondary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="React" color="secondary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Oracle" color="secondary" variant="outlined"/>
+          </div>
           <Typography variant={"h6"}>Private</Typography>
-          <Typography>Flutter / Vue / Kotlin / Ruby on Rails / Firebase ...</Typography>
+          <div style={{ padding: 1 }}>
+            <Chip style={{ margin: 0.5 }} label="Dart" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Flutter" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Spring Boot" color="secondary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Vue" color="secondary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Kotlin" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Docker" color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Firebase" color="primary" variant="outlined"/>
+          </div>
+          <div style={{ padding: 1 }}>
+            <Chip style={{ margin: 0.5 }} label="Ruby" disabled color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Go" disabled color="primary" variant="outlined"/>
+            <Chip style={{ margin: 0.5 }} label="Ruby on Rails" disabled color="secondary" variant="outlined"/>
+          </div>
         </CardContent>
       </Card>
     </Wrapper>

@@ -44,7 +44,7 @@ const WorkExperience = () => {
                 </Typography>
                 <span>- Experienced from leading in to O&M / from player to manager.<br/></span>
                 <span>- Financial(CryptoAssets/FX) trade system for individuals & security company.<br/></span>
-                <span>- Java(Spring), HTML/CSS, JavaScript(React), AWS, Cordova, Oracle, Tomcat, Github...<br/></span>
+                <span>- Java(Spring), HTML/CSS, JavaScript(React), AWS, Apache Cordova, Oracle, Tomcat, Github, Jenkins ...<br/></span>
                 <span>18.4-18.7: Mentor / Training for 150 new graduates<br/></span>
                 <span>19.7-20.4: Dev lead (having 30 members) / New development of hybrid application & back system in leading<br/></span>
               </React.Fragment>
